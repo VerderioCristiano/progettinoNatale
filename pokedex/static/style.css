@@ -1,29 +1,144 @@
+/* Impostazioni di base */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background: linear-gradient(135deg, #f7e7ce, #e0c3fc);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Titolo principale */
 h1 {
-    color: #ff6347;
+    font-size: 3rem;
+    color: #ff4757;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-a {
+/* Pulsanti e link */
+a,
+button {
     display: inline-block;
+    background: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+a:hover,
+button:hover {
+    background: #3742fa;
+    transform: scale(1.05);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* Elenco dei Pokémon */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Ogni carta Pokémon */
+li {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+li h2 {
+    font-size: 1.5rem;
+    color: #ff6f61;
     margin-bottom: 10px;
-    color: #007bff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+li p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Form per aggiungere Pokémon */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #1e90ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background: #3742fa;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ffdd59;
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #fff;
+footer a:hover {
+    text-decoration: underline;
 }
