@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Pokédex</title>
+</head>
+<body>
+    <h1>Pokédex</h1>
+    <a href="/add">Aggiungi un Pokémon</a>
+    <ul>
+        {% for pokemon in pokemons %}
+        <li>
+            <h2>{{ pokemon.name }} ({{ pokemon.type }})</h2>
+            <p>{{ pokemon.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
